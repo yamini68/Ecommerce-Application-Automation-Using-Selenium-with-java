@@ -1,7 +1,7 @@
 package org.example;
 
+import org.example.PageObjectClasses.LoginPage_POM;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -23,6 +23,9 @@ public class p1 {
 
         driver.get("https://rahulshettyacademy.com/client/");
         driver.manage().window().maximize();
+
+         LoginPage_POM landingPage=new LoginPage_POM(driver);
+
         driver.findElement(By.id("userEmail")).sendKeys("anala@example.com");
         driver.findElement(By.id("userPassword")).sendKeys("Anala@123");
         driver.findElement(By.id("login")).click();
